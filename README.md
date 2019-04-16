@@ -1,6 +1,6 @@
 # Cadastro de Medicamentos
 
-![](C:\Users\Beatriz\Documents\GIT\Cadastro-medicamentos\img.png)
+![](https://github.com/biachiarelli/cadastro-medicamentos/blob/master/img.png)
 
 Formulário básico de cadastro de medicamentos e listagem de medicamentos cadastrados.
 
