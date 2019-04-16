@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro de Medicamentos</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="cadastro.css">
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<div class="container">
+		<div class="card">
+			<div class="card-text text-center">
+				<h1>Cadastro de Medicamentos</h1>
+			</div>
+			<div class="card-body">
+				<form id="formulario">
+
+					<div id="mensagens"></div>
+
+					<div class="form-group">
+						<label>Nome comercial</label>
+						<input type="text" id="nomeComercial" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label>Número de registro</label>
+						<input type="text" id="numeroRegistro" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label >Controlado:  </label>
+						<label class="radio-inline"><input type="radio" name="controlado" value="Sim">Sim</label>
+						<label class="radio-inline"><input type="radio" name="controlado" value="Não">Não</label>		
+					</div>
+
+					<div class="form-group">
+						<label >Categoria</label>
+						<select class="form-control" id="categoria">
+							<option selected></option>
+							<option>Novo</option>
+							<option>Genérico</option>
+							<option>Biológico</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="Genérico">Medicamento de referência</label>
+						<input type="text" id="medicamentoReferencia" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="Biológico">Subcategoria</label>
+						<select class="form-control" id="subcategoria">
+							<option selected></option>
+							<option>Alérgeno</option>
+							<option>Vacina</option>
+							<option>Probiótico</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<button id="cadastrar" type= "button" class="btn btn-primary">Cadastrar</button>
+						<button id="limpar" type= "button" class="btn">Limpar</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="vazio" class="alert alert-info container">Não há medicamentos cadastrados</div>
+
+	<div class="container">
+		<table class="table d-none" id="tabela">
+			<thead>
+				<tr>
+					<th>Nome Comercial</th>
+					<th>Número de registro</th>
+					<th>Tipo</th>
+					<th>Categoria</th>
+					<th>Complemento</th>
+					<th>Ações</th>
+				</tr>
+
+			</thead>
+			<tbody id="body"></tbody>
+		</table>
+	</div>
+
+	<script src="bootstrap/jquery.slim.min.js"></script>
+	<script src="bootstrap/popper.min.js"></script>
+	<script src="bootstrap/bootstrap.min.js"></script>
+	<script src="formulario.controller.js"></script>	
+	<script src="tabela.controller.js"></script>	
+	<script src="mensagem.controller.js"></script>	
+	<script src="cadastro.js"></script>	
+</body>
+
+</html>
+
